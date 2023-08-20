@@ -20,7 +20,7 @@ app.use((req, res, next) => {
 console.log('My socket server is running!');
 
 let socket = require('socket.io');
-let io = socket('/');
+let io = socket(server);
 
 io.sockets.on('connection', newConnection);
 

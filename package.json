@@ -24,5 +24,8 @@
   "bugs": {
     "url": "https://github.com/ccalvarez/p5jsgame/issues"
   },
-  "homepage": "https://github.com/ccalvarez/p5jsgame#readme"
+  "homepage": "https://github.com/ccalvarez/p5jsgame#readme",
+  "dependencies": {
+    "express": "^4.18.2"
+  }
 }

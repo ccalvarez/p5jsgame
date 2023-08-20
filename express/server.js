@@ -1,4 +1,5 @@
 let express = require('express');
+const serverless = require('serverless-http');
 
 let app = express();
 let server = app.listen(3000);
@@ -23,5 +24,6 @@ function newConnection(socket) {
   }
 }
 
-// Export the Express API
+// Export the Express application
 module.exports = app;
+module.exports.handler = serverless(app);

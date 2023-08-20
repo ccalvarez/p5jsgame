@@ -2,7 +2,7 @@ const express = require('express');
 const serverless = require('serverless-http');
 
 let app = express();
-let server = app.listen();
+let server = app.listen(3000);
 
 app.use(express.static('public'));
 

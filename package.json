@@ -4,7 +4,7 @@
   "description": "Juego p5.js multijugador inspirado en el modo Capture the Flag del juego Unreal Tournament",
   "main": "server.js",
   "scripts": {
-    "build": "netlify-lambda build express",
+    "build": "NODE_OPTIONS='--openssl-legacy-provider' netlify-lambda build express",
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "nodemon ./express/server.js"
   },

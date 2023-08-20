@@ -1,24 +1,10 @@
 const express = require('express');
 const serverless = require('serverless-http');
-const cors = require('cors');
 
 let app = express();
-let server = app.listen(3000);
+let server = app.listen();
 
 app.use(express.static('public'));
-
-app.use(cors());
-
-// app.use((req, res, next) => {
-//   res.setHeader('Access-Control-Allow-Origin', '*');
-
-//   res.setHeader(
-//     'Access-Control-Allow-Methods',
-//     'GET, POST, PUT, PATCH, DELETE'
-//   );
-//   res.setHeader('Access-Control-Allow-Headers', 'Content-Type, Authorization');
-//   next();
-// });
 
 console.log('My socket server is running!');
 

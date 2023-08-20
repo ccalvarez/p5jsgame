@@ -9,7 +9,7 @@ app.use(express.static('public'));
 console.log('My socket server is running!');
 
 let socket = require('socket.io');
-let io = socket(server);
+let io = socket('/');
 
 io.sockets.on('connection', newConnection);
 

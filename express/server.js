@@ -1,10 +1,13 @@
 const express = require('express');
 const serverless = require('serverless-http');
+const cors = require('cors');
 
 let app = express();
 let server = app.listen(3000);
 
 app.use(express.static('public'));
+
+app.use(cors());
 
 console.log('My socket server is running!');
 

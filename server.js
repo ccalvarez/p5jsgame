@@ -1,25 +1,23 @@
 const express = require('express');
-const cors = require('cors');
+// const cors = require('cors');
 
 let app = express();
-app.use(cors());
+// app.use(cors());
 
 let server = app.listen(3000);
 
 app.use(express.static('public'));
 
-app.use((req, res, next) => {
-  if (allowedOrigins.includes(origin)) {
-    res.setHeader('Access-Control-Allow-Origin', '*');
-  }
+// app.use((req, res, next) => {
+//   res.setHeader('Access-Control-Allow-Origin', '*');
 
-  res.setHeader(
-    'Access-Control-Allow-Methods',
-    'GET, POST, PUT, PATCH, DELETE'
-  );
-  res.setHeader('Access-Control-Allow-Headers', 'Content-Type, Authorization');
-  next();
-});
+//   res.setHeader(
+//     'Access-Control-Allow-Methods',
+//     'GET, POST, PUT, PATCH, DELETE'
+//   );
+//   res.setHeader('Access-Control-Allow-Headers', 'Content-Type, Authorization');
+//   next();
+// });
 
 console.log('My socket server is running!');
 
@@ -29,7 +27,7 @@ let io = socket(server);
 io.sockets.on('connection', newConnection);
 
 function newConnection(socket) {
-  console.log(`New connection: ${socket.id}`);
+  // console.log(`New connection: ${socket.id}`);
 
   socket.on('mouse', mouseMsg);
 

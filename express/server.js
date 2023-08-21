@@ -1,5 +1,4 @@
 const express = require('express');
-const serverless = require('serverless-http');
 const cors = require('cors');
 
 let app = express();
@@ -42,4 +41,3 @@ function newConnection(socket) {
 
 // Export the Express application
 module.exports = app;
-module.exports.handler = serverless(app);

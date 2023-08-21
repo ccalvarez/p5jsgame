@@ -4,7 +4,8 @@ function setup() {
   createCanvas(600, 400);
   background(51);
 
-  socket = io.connect('http://localhost:3000/');
+  // socket = io.connect('http://localhost:3000/');
+  socket = io.connect('https://p5socket.onrender.com:3000/');
   socket.on('mouse', newDrawing);
 }
 
